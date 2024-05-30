@@ -32,3 +32,8 @@ opt.clipboard:append("unnamedplus")
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+opt.showmatch = true
+
+-- swapfile
+opt.swapfile = false

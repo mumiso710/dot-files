@@ -13,7 +13,9 @@ return {
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		lspconfig.clangd.setup({})
+		require("java").setup()
 		lspconfig.rust_analyzer.setup({})
+		lspconfig.yamlls.setup({})
 		lspconfig.lua_ls.setup({
 			settings = {
 				Lua = {
@@ -40,14 +42,8 @@ return {
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-				opts.desc = "Show LSP definitions"
-				keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
-
 				opts.desc = "Show LSP implementations"
 				keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
-
-				opts.desc = "Show LSP type definitions"
-				keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts) -- show lsp type definitions
 
 				-- opts.desc = "Show buffer diagnostics"
 				-- keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file

@@ -28,5 +28,11 @@ return {
 
 		opts.desc = "Go to next diagnostic"
 		keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+
+		opts.desc = "Show LSP definitions"
+		keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- show lsp definitions
+
+		opts.desc = "Show LSP type definitions"
+		keymap.set("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>", opts) -- show lsp type definitions
 	end,
 }
