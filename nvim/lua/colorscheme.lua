@@ -1,3 +1,2 @@
--- vim.cmd("colorscheme nightfox")
--- vim.cmd("colorscheme nord")
 vim.cmd([[colorscheme everforest]])
+-- vim.cmd([[colorscheme tokyonight-moon]])
